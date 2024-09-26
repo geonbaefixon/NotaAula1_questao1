@@ -1,1 +1,24 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Aluno a = new Aluno();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Informe o nome do aluno: ");
+        a.nome = sc.nextLine();
+        System.out.println("Nota 1: ");
+        a.n1 = sc.nextDouble();
+        System.out.println("Nota 2: ");
+        a.n2 = sc.nextDouble();
+        System.out.println("Nota 3: ");
+        a.n3 = sc.nextDouble();
+        System.out.println("Média: ");
+        a.calcularMedia(a.n1,a.n2,a.n3);
+
+        System.out.println("Nome do aluno");
+        System.out.println(a.nome);
+        System.out.println("Situação: ");
+        a.verificarAprovacao();
+    }
+}
